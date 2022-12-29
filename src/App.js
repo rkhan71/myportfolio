@@ -1,4 +1,3 @@
-// Importing Router and Components to set up different pages of web application
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contact from "./Contact";
 import Home from "./Home";
@@ -8,6 +7,7 @@ import ProjectDisplay from "./ProjectDisplay";
 import Projects from "./Projects";
 import Resume from "./Resume";
 
+// Setting up different pages of web application using React Router
 function App() {  
   return (
     // Navbar and footer shown on every page, only one of the components between the Routes tag shown at a time
