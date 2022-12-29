@@ -1,6 +1,7 @@
 import Loading from "./Loading";
 import ProjectList from "./ProjectList";
 import useFetch from "./useFetch";
+import Error from "./Error";
 
 // Fetching information about projects from database and displaying preview of each project
 const Projects = () => {
@@ -14,7 +15,7 @@ const Projects = () => {
                 <h1>Rayan's Online Portfolio</h1>
                 <button className="btn"><h5>Projects</h5></button>
             </div>
-            {error && <div className="container-fluid d-flex justify-content-center align-items-center"><h1>{ error }</h1></div>}
+            {error && <Error error={ error } />}
             {loading && <Loading />}
             {projects && <ProjectList projects={ projects } />}
         </div>
