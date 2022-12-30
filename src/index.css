@@ -28,6 +28,10 @@ nav {
   color: white;
 }
 
+.Error .btn {
+  background-color: #DF2935;
+}
+
 .NotFound #home {
   background-color: #DF2935;
 }
