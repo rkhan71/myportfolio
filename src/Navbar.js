@@ -1,10 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
-import logo from "./logo.png";
 
+// Navbar with links to different pages of web app
 const Navbar = () => {
+    // Using useLocation hook to determine which page user is on so it can be displayed in navbar
     const location = useLocation();
 
     return (
+        // Using a Bootstrap navbar that will collapse into a menu when screen is small
         <div className="Navbar">
             <nav className="navbar navbar-expand-lg border-bottom border-5 border-dark">
                 <div className="container-fluid">

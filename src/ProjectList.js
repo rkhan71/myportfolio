@@ -5,7 +5,7 @@ const ProjectList = ({ projects }) => {
     return (
         // projects is an array of project objects
         // map function goes through this array and outputs relevant information from each project
-        <div className="ProjectList container mb-5">
+        <div className="ProjectList container">
             {projects.map(project => (
                 <div className="container-fluid" key={ project.id }>
                     <Link to={`/projects/${ project.id }`}>

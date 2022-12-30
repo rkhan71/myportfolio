@@ -2,7 +2,9 @@ import logo from "./logo.png";
 import { Link } from "react-router-dom";
 import { Linkedin, TelephoneFill, EnvelopeAtFill, Github, CCircle } from "react-bootstrap-icons";
 
+// Footer for web app
 const Footer = () => {
+    // Footer is a row with 3 columns each showing different information
     return (
         <div className="Footer container-fluid border-top border-5 border-dark mt-auto">
             <div className="row h-100">

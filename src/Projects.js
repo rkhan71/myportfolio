@@ -10,7 +10,7 @@ const Projects = () => {
     
     return (
         // Use conditional templating to show relevant content depending on state of fetch
-        <div className="Projects">
+        <div className="Projects mb-5">
             <div className="container-fluid d-flex justify-content-center align-items-center flex-column heading">
                 <h1>Rayan's Online Portfolio</h1>
                 <button className="btn fw-bold mt-4">Projects</button>

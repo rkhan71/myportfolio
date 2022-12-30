@@ -45,9 +45,13 @@ nav {
 }
 
 .heading .btn {
-  background-color: #DF2935;
+  background-color: #FFB140;
 }
 
 .Footer img {
   mix-blend-mode: multiply;
+}
+
+.form .btn {
+  background-color: #DF2935;
 }
