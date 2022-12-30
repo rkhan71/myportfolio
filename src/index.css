@@ -1,5 +1,5 @@
 html, body, #root {
-  height: 100%;
+  min-height: 100vh;
   margin: 0px;
 }
 
@@ -7,8 +7,12 @@ nav {
   background-color: #FFB140;
 }
 
-.heading {
+.heading, .Footer {
   height: 250px;
+}
+
+.Footer {
+  background-color: #3772FF;
 }
 
 .ProjectList div:hover {
