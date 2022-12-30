@@ -19,9 +19,13 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.ProjectList a {
+.ProjectList a, .Footer a {
   text-decoration: none;
   color: black;
+}
+
+.Footer a:hover {
+  color: white;
 }
 
 .NotFound #home {
@@ -42,4 +46,8 @@ nav {
 
 .heading .btn {
   background-color: #DF2935;
+}
+
+.Footer img {
+  mix-blend-mode: multiply;
 }
