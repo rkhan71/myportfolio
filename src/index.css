@@ -20,3 +20,22 @@ nav {
   color: black;
 }
 
+.NotFound #home {
+  background-color: #DF2935;
+}
+
+.NotFound #back {
+  background-color: #3772FF;
+}
+
+.NotFound .btn {
+  color: black;
+}
+
+.NotFound .btn:hover {
+  color: white;
+}
+
+.heading .btn {
+  background-color: #DF2935;
+}

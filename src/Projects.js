@@ -13,7 +13,7 @@ const Projects = () => {
         <div className="Projects container">
             <div className="container-fluid d-flex justify-content-center align-items-center flex-column heading">
                 <h1>Rayan's Online Portfolio</h1>
-                <button className="btn"><h5>Projects</h5></button>
+                <button className="btn fw-bold mt-4">Projects</button>
             </div>
             {error && <Error error={ error } />}
             {loading && <Loading />}

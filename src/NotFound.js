@@ -7,10 +7,14 @@ const NotFound = () => {
 
     return (
         <div className="NotFound">
-            <div className="container-fluid d-flex justify-content-center align-items-center flex-column heading">
-                <h1>Oops... Page Not Found</h1>
-                <Link to="/"><button className="btn"><h5>Go Home</h5></button></Link>
-                <button className="btn" onClick={() => navigate(-1)}><h5>Go Back</h5></button>
+            <div className="d-flex flex-column align-items-center justify-content-center heading">
+                <div className="d-flex flex-row mb-4">
+                    <h1>Oops... Page Not Found</h1>
+                </div>
+                <div className="d-flex flex-row justify-content-around">
+                    <Link to="/"><button className="btn mx-5 fw-bold" id="home">Go Home</button></Link>
+                    <button className="btn mx-5 fw-bold" id="back" onClick={() => navigate(-1)}>Go Back</button>
+                </div>
             </div>
         </div>
     );
