@@ -11,6 +11,13 @@ const Contact = () => {
 
     // Using Web3Forms API to get information from contact form to my email
     const handleSubmit = async (event) => {
+        // Checking if form inputs are valid, if not form validation from Bootstrap is used
+        if (!event.target.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+            event.target.classList.add("was-validated");
+            return;
+        }
         setLoading(true);
         event.preventDefault();
         const formData = new FormData(event.target);
@@ -32,8 +39,8 @@ const Contact = () => {
     };
 
     return (
-        // Conditional templates to display form, loading symbol when message is sending,
-        // sent message when message is sent, and error template when error occurs
+        // Conditional templates to display either form, loading symbol when message is sending,
+        // sent message when message is sent, or error template when error occurs
         <div className="Contact mb-5">
             <div className="container-fluid d-flex justify-content-center align-items-center flex-column heading">
                 <h1>Rayan's Online Portfolio</h1>
@@ -42,18 +49,27 @@ const Contact = () => {
             {loading && <Loading />}
             {error && <Error error={ error } />}
             {!(sent) && !(loading) && !(error) && (
-                <form className="form container" onSubmit={ handleSubmit }>
+                <form className="form container needs-validation" onSubmit={ handleSubmit } noValidate>
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Name</label>
-                        <input type="text" className="form-control" id="name" name="name" placeholder="Rayan" />
+                        <input type="text" className="form-control" id="name" name="name" placeholder="Rayan" required/>
+                        <div className="invalid-feedback">
+                            Please enter your name
+                        </div>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label">Email Address</label>
-                        <input type="email" className="form-control" id="email" name="email" placeholder="name@example.com" />
+                        <input type="email" className="form-control" id="email" name="email" placeholder="name@example.com" required/>
+                        <div className="invalid-feedback">
+                            Please enter a valid email address
+                        </div>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="message" className="form-label">Message</label>
-                        <textarea className="form-control" id="message" name="message"></textarea>
+                        <textarea className="form-control" id="message" name="message" required></textarea>
+                        <div className="invalid-feedback">
+                            Please enter a message
+                        </div>
                     </div>
                     <div className="text-center">
                         <button type="submit" className="btn fw-bold">Submit</button>
