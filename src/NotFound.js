@@ -12,8 +12,8 @@ const NotFound = () => {
                     <h1>Oops... Page Not Found</h1>
                 </div>
                 <div className="d-flex flex-row justify-content-around">
-                    <Link to="/"><button className="btn mx-5 fw-bold" id="home">Go Home</button></Link>
-                    <button className="btn mx-5 fw-bold" id="back" onClick={() => navigate(-1)}>Go Back</button>
+                    <Link to="/"><button className="red btn mx-5 fw-bold">Go Home</button></Link>
+                    <button className="red btn mx-5 fw-bold" onClick={() => navigate(-1)}>Go Back</button>
                 </div>
             </div>
         </div>

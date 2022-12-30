@@ -72,7 +72,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className="text-center">
-                        <button type="submit" className="btn fw-bold">Submit</button>
+                        <button type="submit" className="red btn fw-bold">Submit</button>
                     </div>
                 </form>
             )}

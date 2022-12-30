@@ -7,13 +7,19 @@ const ProjectList = ({ projects }) => {
         // map function goes through this array and outputs relevant information from each project
         <div className="ProjectList container">
             {projects.map(project => (
-                <div className="container-fluid" key={ project.id }>
-                    <Link to={`/projects/${ project.id }`}>
-                        <p className="pt-3">{ project.title }</p>
-                        <p className="text-muted">{ project.date }</p>
-                        <p className="pb-3">{ project.body }</p>
-                    </Link>
-                </div>
+                <Link to={`/projects/${ project.id }`}>
+                    <div className="tile container-fluid d-flex flex-column px-3 py-3 mb-3" key={ project.id }>
+                        <div className="row mb-3 fs-3">
+                            <div className="red-color col fw-bold">
+                                { project.title }
+                            </div>
+                            <div className="col text-end text-muted">
+                                { project.date }
+                            </div>
+                        </div>
+                        { project.preview }
+                    </div>
+                </Link>
             ))}
         </div>
     );

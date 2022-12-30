@@ -3,19 +3,11 @@ html, body, #root {
   margin: 0px;
 }
 
-nav {
-  background-color: #FFB140;
-}
-
 .heading, .Footer {
   height: 250px;
 }
 
-.Footer {
-  background-color: #3772FF;
-}
-
-.ProjectList div:hover {
+.tile:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -28,34 +20,27 @@ nav {
   color: white;
 }
 
-.Error .btn {
-  background-color: #DF2935;
-}
-
-.NotFound #home {
-  background-color: #DF2935;
-}
-
-.NotFound #back {
-  background-color: #3772FF;
-}
-
-.NotFound .btn {
+.btn:hover {
   color: black;
-}
-
-.NotFound .btn:hover {
-  color: white;
-}
-
-.heading .btn {
   background-color: #FFB140;
+}
+
+.red {
+  background-color: #DF2935;
+}
+
+.orange {
+  background-color: #FFB140;
+}
+
+.blue {
+  background-color: #3772FF;
 }
 
 .Footer img {
   mix-blend-mode: multiply;
 }
 
-.form .btn {
-  background-color: #DF2935;
+.red-color {
+  color: #DF2935;
 }

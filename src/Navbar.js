@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         // Using a Bootstrap navbar that will collapse into a menu when screen is small
         <div className="Navbar">
-            <nav className="navbar navbar-expand-lg border-bottom border-5 border-dark">
+            <nav className="navbar navbar-expand-lg border-bottom border-5 border-dark orange">
                 <div className="container-fluid">
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mx-auto">
