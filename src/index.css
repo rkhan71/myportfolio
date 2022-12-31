@@ -16,8 +16,21 @@ html, body, #root {
   color: black;
 }
 
+.ProjectDisplay p {
+  white-space: pre-line;  
+  vertical-align: bottom;
+}
+
 .Footer a:hover {
   color: white;
+}
+
+.Footer img {
+  mix-blend-mode: multiply;
+}
+
+.btn {
+  background-color: #DF2935;
 }
 
 .btn:hover {
@@ -37,10 +50,22 @@ html, body, #root {
   background-color: #3772FF;
 }
 
-.Footer img {
-  mix-blend-mode: multiply;
-}
-
 .red-color {
   color: #DF2935;
+}
+
+/* Fixing issue of bootstrap icons being off-balance vertically in buttons 
+and making them look better in general as well. source: https://github.com/twbs/icons/issues/82 */
+svg {
+  vertical-align: -0.125em;
+  margin-bottom: calc(-0.125em / 2);
+}
+
+.btn svg {
+    transform: scale(1.5);
+    margin-bottom: 0;
+}
+
+.double-space {
+  white-space: pre;
 }

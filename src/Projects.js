@@ -6,14 +6,14 @@ import Error from "./Error";
 // Fetching information about projects from database and displaying preview of each project
 const Projects = () => {
     // Using useFetch custom hook to fetch data
-    const { data: projects, loading, error } = useFetch("http://localhost:8000/projects");
+    const { data: projects, loading, error } = useFetch("https://my-json-server.typicode.com/rkhan71/data/projects");
     
     return (
         // Use conditional templating to show relevant content depending on state of fetch
         <div className="Projects mb-5">
             <div className="container-fluid d-flex justify-content-center align-items-center flex-column heading">
                 <h1>Rayan's Online Portfolio</h1>
-                <button className="btn fw-bold mt-4">Projects</button>
+                <div className="fw-bold mt-4">Projects</div>
             </div>
             {error && <Error error={ error } />}
             {loading && <Loading />}

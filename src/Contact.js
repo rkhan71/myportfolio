@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Loading from "./Loading";
 import Error from "./Error";
+import { Send } from "react-bootstrap-icons";
 
 // Page where user can contact me through a form that sends me an email
 const Contact = () => {
@@ -44,7 +45,7 @@ const Contact = () => {
         <div className="Contact mb-5">
             <div className="container-fluid d-flex justify-content-center align-items-center flex-column heading">
                 <h1>Rayan's Online Portfolio</h1>
-                <button className="btn mt-4 fw-bold">Contact</button>
+                <div className="fw-bold mt-4">Contact</div>
             </div>
             {loading && <Loading />}
             {error && <Error error={ error } />}
@@ -72,7 +73,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className="text-center">
-                        <button type="submit" className="red btn fw-bold">Submit</button>
+                        <button type="submit" className="btn fw-bold double-space"><Send />  Send</button>
                     </div>
                 </form>
             )}

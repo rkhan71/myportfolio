@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { HouseFill, CaretLeftFill } from "react-bootstrap-icons";
 
 // Page to display when user visits unrecognized route path
 const NotFound = () => {
@@ -12,8 +13,8 @@ const NotFound = () => {
                     <h1>Oops... Page Not Found</h1>
                 </div>
                 <div className="d-flex flex-row justify-content-around">
-                    <Link to="/"><button className="red btn mx-5 fw-bold">Go Home</button></Link>
-                    <button className="red btn mx-5 fw-bold" onClick={() => navigate(-1)}>Go Back</button>
+                    <Link to="/"><button className="btn mx-5 fw-bold double-space"><HouseFill />  Home</button></Link>
+                    <button className="btn mx-5 fw-bold" onClick={() => navigate(-1)}><CaretLeftFill /> Back</button>
                 </div>
             </div>
         </div>
