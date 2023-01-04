@@ -11,6 +11,15 @@ html, body, #root {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.Resume a {
+  text-decoration: none;
+  color: #3772FF;
+}
+
+.Resume a:hover {
+  color: #DF2935;
+}
+
 .ProjectList a, .Footer a {
   text-decoration: none;
   color: black;
