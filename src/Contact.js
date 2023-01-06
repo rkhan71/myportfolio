@@ -23,7 +23,7 @@ const Contact = () => {
         event.preventDefault();
         const formData = new FormData(event.target);
     
-        formData.append("access_key", null);
+        formData.append("access_key", "29d903e4-26b6-4a37-a5e2-91b442f8f9ea");
     
         const res = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -50,35 +50,40 @@ const Contact = () => {
             {loading && <Loading />}
             {error && <Error error={ error } />}
             {!(sent) && !(loading) && !(error) && (
-                <form className="form container needs-validation" onSubmit={ handleSubmit } noValidate>
+                <div className="container">
                     <div className="mb-3">
-                        <label htmlFor="name" className="form-label">Name</label>
-                        <input type="text" className="form-control" id="name" name="name" placeholder="Rayan" required/>
-                        <div className="invalid-feedback">
-                            Please enter your name
+                        Feel free to use this form to contact me with any questions, comments, or concerns. Make sure to enter your name and email correctly so I can get back to you. More of my contact information can be found at the bottom of the page including my email, phone number, LinkedIn, and GitHub.
+                    </div>
+                    <form className="form needs-validation" onSubmit={ handleSubmit } noValidate>
+                        <div className="mb-3">
+                            <label htmlFor="name" className="form-label red-color fw-bold">Name</label>
+                            <input type="text" className="form-control" id="name" name="name" placeholder="Name" required/>
+                            <div className="invalid-feedback">
+                                Please enter your name
+                            </div>
                         </div>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="email" className="form-label">Email Address</label>
-                        <input type="email" className="form-control" id="email" name="email" placeholder="name@example.com" required/>
-                        <div className="invalid-feedback">
-                            Please enter a valid email address
+                        <div className="mb-3">
+                            <label htmlFor="email" className="form-label red-color fw-bold">Email Address</label>
+                            <input type="email" className="form-control" id="email" name="email" placeholder="name@example.com" required/>
+                            <div className="invalid-feedback">
+                                Please enter a valid email address
+                            </div>
                         </div>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="message" className="form-label">Message</label>
-                        <textarea className="form-control" id="message" name="message" required></textarea>
-                        <div className="invalid-feedback">
-                            Please enter a message
+                        <div className="mb-3">
+                            <label htmlFor="message" className="form-label red-color fw-bold">Message</label>
+                            <textarea className="form-control" id="message" name="message" placeholder="Hello!" required></textarea>
+                            <div className="invalid-feedback">
+                                Please enter a message
+                            </div>
                         </div>
-                    </div>
-                    <div className="text-center">
-                        <button type="submit" className="btn fw-bold double-space"><Send />  Send</button>
-                    </div>
-                </form>
+                        <div className="text-center">
+                            <button type="submit" className="btn fw-bold double-space"><Send />  Send</button>
+                        </div>
+                    </form>
+                </div>
             )}
             {sent && (
-                <div className="container text-center">
+                <div className="container text-center fw-bold red-color">
                     Message sent successfuly!
                 </div>
             )}
