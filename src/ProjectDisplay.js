@@ -37,7 +37,7 @@ const ProjectDisplay = () => {
                             <a href="#"><button className="btn fw-bold double-space"><Github />  Repo</button></a>
                         </div>
                     </div>
-                    <p>{ project.body }</p>
+                    <div className="body">{ project.body }</div>
                 </div>
             )}
         </div>
