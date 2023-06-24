@@ -3,6 +3,7 @@ import Loading from "./Loading";
 import Error from "./Error";
 import useFetch from "./useFetch";
 import { Github, CaretLeftFill } from "react-bootstrap-icons";
+import ProjectCarousel from "./ProjectCarousel";
 
 // Displays singular project in full detail
 const ProjectDisplay = () => {
@@ -10,7 +11,7 @@ const ProjectDisplay = () => {
     const { id } = useParams();
 
     // Fetch data for single project using id
-    const { data: project, loading, error } = useFetch("https://my-json-server.typicode.com/rkhan71/data/projects/" + id)
+    const { data: project, loading, error } = useFetch("http://localhost:8080/projects/" + id)
 
     return (
         // Use conditional templating to show relevant content depending on state of fetch
@@ -34,10 +35,11 @@ const ProjectDisplay = () => {
                         </div>
                         <div className="col text-end">
                             <Link to="/projects"><button className="btn fw-bold mx-3"><CaretLeftFill /> Back</button></Link>
-                            <a href="#"><button className="btn fw-bold double-space"><Github />  Repo</button></a>
+                            <a href={ project.link }><button className="btn fw-bold double-space"><Github />  Repo</button></a>
                         </div>
                     </div>
-                    <div className="body">{ project.body }</div>
+                    <div className="body mb-3">{ project.body }</div>
+                    <ProjectCarousel />
                 </div>
             )}
         </div>

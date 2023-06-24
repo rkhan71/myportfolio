@@ -52,7 +52,7 @@ const Contact = () => {
             {!(sent) && !(loading) && !(error) && (
                 <div className="container">
                     <div className="mb-3">
-                        Feel free to use this form to contact me with any questions, comments, or concerns. Make sure to enter your name and email correctly so I can get back to you. My contact information can be found at the bottom of the page including my email, phone number, LinkedIn, and GitHub.
+                        Feel free to use this form to contact me with any questions, comments, or concerns. Make sure to enter your name and email correctly so I can get back to you. If you would like to contact me more directly, please reach out through my email, phone number, LinkedIn, or GitHub which can all be found at the bottom of the page.
                     </div>
                     <form className="form needs-validation" onSubmit={ handleSubmit } noValidate>
                         <div className="mb-3">
@@ -69,7 +69,7 @@ const Contact = () => {
                                 Please enter a valid email address
                             </div>
                         </div>
-                        <div className="mb-3">
+                        <div className="mb-4">
                             <label htmlFor="message" className="form-label red-color fw-bold">Message</label>
                             <textarea className="form-control" id="message" name="message" placeholder="Hello!" required></textarea>
                             <div className="invalid-feedback">
