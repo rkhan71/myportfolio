@@ -1,0 +1,43 @@
+{
+  "api": {
+    "portfolioapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getprojects"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "getprojects": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_getprojects_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getprojects"
+        }
+      ]
+    },
+    "AMPLIFY_function_getprojects_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getprojects"
+        }
+      ]
+    }
+  }
+}

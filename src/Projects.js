@@ -6,8 +6,8 @@ import Error from "./Error";
 // Fetching information about projects from database and displaying preview of each project
 const Projects = () => {
     // Using useFetch custom hook to fetch data
-    const { data: projects, loading, error } = useFetch("http://localhost:8080/projects");
-    
+    const { data: projects, loading, error } = useFetch("portfolioapi", "/projects");
+
     return (
         // Use conditional templating to show relevant content depending on state of fetch
         <div className="Projects mb-5">
@@ -17,7 +17,7 @@ const Projects = () => {
             </div>
             {error && <Error error={ error } />}
             {loading && <Loading />}
-            {projects && <ProjectList projects={ projects } />}
+            {projects && <ProjectList projects={ projects.projects } />}
         </div>
     );
 }

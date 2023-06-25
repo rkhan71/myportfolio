@@ -11,7 +11,7 @@ const ProjectDisplay = () => {
     const { id } = useParams();
 
     // Fetch data for single project using id
-    const { data: project, loading, error } = useFetch("http://localhost:8080/projects/" + id)
+    const { data: project, loading, error } = useFetch("portfolioapi", "/projects/" + id);
 
     return (
         // Use conditional templating to show relevant content depending on state of fetch

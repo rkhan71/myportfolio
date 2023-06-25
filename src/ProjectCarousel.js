@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const data = [
   {
-   image: require('./img1.webp'), 
+   image: require('./img1.jpg'), 
    caption:"Caption",
    description:"Description Here"
   },
