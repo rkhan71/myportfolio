@@ -50,27 +50,27 @@ const Contact = () => {
             {loading && <Loading />}
             {error && <Error error={ error } />}
             {!(sent) && !(loading) && !(error) && (
-                <div className="container">
+                <div className="container contact-box px-5 py-5">
                     <div className="mb-3">
                         Feel free to use this form to contact me with any questions, comments, or concerns. Make sure to enter your name and email correctly so I can get back to you. If you would like to contact me more directly, please reach out through my email, phone number, LinkedIn, or GitHub which can all be found at the bottom of the page.
                     </div>
                     <form className="form needs-validation" onSubmit={ handleSubmit } noValidate>
                         <div className="mb-3">
-                            <label htmlFor="name" className="form-label red-color fw-bold">Name</label>
+                            <label htmlFor="name" className="form-label green-text fw-bold">Name</label>
                             <input type="text" className="form-control" id="name" name="name" placeholder="Name" required/>
                             <div className="invalid-feedback">
                                 Please enter your name
                             </div>
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="email" className="form-label red-color fw-bold">Email Address</label>
+                            <label htmlFor="email" className="form-label green-text fw-bold">Email Address</label>
                             <input type="email" className="form-control" id="email" name="email" placeholder="name@example.com" required/>
                             <div className="invalid-feedback">
                                 Please enter a valid email address
                             </div>
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="message" className="form-label red-color fw-bold">Message</label>
+                            <label htmlFor="message" className="form-label green-text fw-bold">Message</label>
                             <textarea className="form-control" id="message" name="message" placeholder="Hello!" required></textarea>
                             <div className="invalid-feedback">
                                 Please enter a message

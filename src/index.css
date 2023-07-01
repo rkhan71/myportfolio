@@ -3,35 +3,55 @@ html, body, #root {
   margin: 0px;
 }
 
-.heading, .Footer {
-  height: 250px;
+#root {
+  background-image: url('./trees2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.Home img {
-  border-color: #DF2935;
+a {
+  text-decoration: none;
+}
+
+.heading {
+  height: 50vh;
+  color: #113929;
+}
+
+.tint {
+  background: linear-gradient(#11392900, #113929cc, #113929cc, #113929, #113929, #113929, #113929, #113929cc);
+}
+
+
+/* Project page stuff */
+.tile, .project-box, .contact-box {
+  background-color: #A6B3AD99;
+  backdrop-filter: blur(4px);
+  color: #010E09;
+  transition: 0.3s;
 }
 
 .tile:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.Resume a {
-  text-decoration: none;
-  color: #3772FF;
-}
-
-.Resume a:hover {
-  color: #DF2935;
-}
-
-.ProjectList a, .Footer a {
-  text-decoration: none;
-  color: black;
+  box-shadow: #010E09 0px 5px 15px;
+  backdrop-filter: blur(10px);
 }
 
 .ProjectDisplay .body {
   white-space: pre-line;  
   vertical-align: bottom;
+}
+
+
+/* Footer */
+.Footer {
+  height: 250px;
+  color: #113929;
+  background: linear-gradient(#113929cc, #A6B3AD, #A6B3AD, #A6B3AD);
 }
 
 .Footer a:hover {
@@ -42,30 +62,89 @@ html, body, #root {
   mix-blend-mode: multiply;
 }
 
+.Footer a {
+  color: #113929;
+  transition: 0.3s;
+}
+
+
+/* Buttons? */
 .btn {
-  background-color: #DF2935;
+  background-color: #113929;
+  color: #A6B3AD;
 }
 
 .btn:hover {
-  color: black;
-  background-color: #FFB140;
+  color: #010E09;
+  background-color: #A6B3AD;
 }
 
+.btn:active {
+  background-color: white !important;
+  color: #010E09 !important;
+  border: none !important;
+}
+
+
+/* Navbar */
+.navbar-nav > .nav-item > .on {
+  color: #113929;
+}
+
+.navbar-nav > .nav-item > a {
+  color: #A6B3AD;
+}
+
+.navbar-nav > .nav-item > a:hover {
+  color: #113929;
+}
+
+
+/* Color scheme */
 .red {
   background-color: #DF2935;
 }
 
 .orange {
-  background-color: #FFB140;
+  background-color: #C05746;
 }
 
 .blue {
-  background-color: #3772FF;
+  background-color: #578F8C;
 }
 
 .red-color {
   color: #DF2935;
 }
+
+.ash-text {
+  color: #A6B3AD;
+}
+
+.night-text {
+  color: #010E09;
+}
+
+.green-text {
+  color: #113929;
+}
+
+.burgundy-text {
+  color: #70161E;
+}
+
+.ash {
+  background-color: #A6B3AD;
+}
+
+.night {
+  background-color: #010E09;
+}
+
+.green {
+  background-color: #113929;
+}
+
 
 /* Fixing issue of bootstrap icons being off-balance vertically in buttons 
 and making them look better in general as well. source: https://github.com/twbs/icons/issues/82 */

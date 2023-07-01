@@ -6,7 +6,7 @@ import { Linkedin, TelephoneFill, EnvelopeAtFill, Github, CCircle } from "react-
 const Footer = () => {
     // Footer is a row with 3 columns each showing different information
     return (
-        <div className="Footer container-fluid border-top border-5 border-dark mt-auto blue">
+        <div className="Footer container-fluid mt-auto">
             <div className="row h-100">
                 <div className="col d-flex flex-column align-items-center justify-content-center">
                     <img className="img-fluid w-50" src={logo} alt="logo"></img>

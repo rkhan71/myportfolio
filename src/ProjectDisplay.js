@@ -1,35 +1,57 @@
-import { useParams, Link } from "react-router-dom";
-import Loading from "./Loading";
-import Error from "./Error";
-import useFetch from "./useFetch";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { Github, CaretLeftFill } from "react-bootstrap-icons";
 import ProjectCarousel from "./ProjectCarousel";
+import { Cloudinary } from "@cloudinary/url-gen";
 
 // Displays singular project in full detail
 const ProjectDisplay = () => {
-    // Using useParams hook to get id of project that needs to be displayed
-    const { id } = useParams();
+    const cld = new Cloudinary({cloud: {cloudName: 'dha5vtjog'}});
+    const img1 = cld.image('placeholder1_ptxjuv');
+    const img2 = cld.image('placeholder2_y3xwex');
+    const img3 = cld.image('placeholder3_ukfyz9');
 
-    // Fetch data for single project using id
-    const { data: project, loading, error } = useFetch("portfolioapi", "/projects/" + id);
+    const images = [
+        {
+         image: img1,
+         caption:"Caption",
+         description:"Description Here"
+        },
+        {
+          image: img2,
+          caption:"Caption",
+          description:"Description Here"
+        },
+        {
+          image: img3, 
+          caption:"Caption",
+          description:"Description Here"
+        } 
+    ]
+    
+    // Scroll to top on page load
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    // Project data sent to this page through state of link in ProjectList page
+    const project = useLocation().state;
 
     return (
-        // Use conditional templating to show relevant content depending on state of fetch
+        // Show project
         <div className="ProjectDisplay container mb-5">
             <div className="container-fluid d-flex justify-content-center align-items-center flex-column heading">
                 <h1>Rayan's Online Portfolio</h1>
-                <div className="mt-4 fw-bold">{project ? project.title : "Projects"}</div>
+                <div className="mt-4 fw-bold">{ project.title }</div>
             </div>
-            {loading && <Loading />}
-            {error && <Error error={error} />}
             {project && (
-                <div className="container-fluid d-flex flex-column">
+                <div className="container-fluid d-flex flex-column project-box px-5 py-5">
                     <div className="row mb-3">
                         <div className="col fs-3">
-                            <div className="fw-bold red-color">
+                            <div className="fw-bold green-text">
                                 { project.title }
                             </div>
-                            <div className="text-muted">
+                            <div>
                                 { project.date }
                             </div>
                         </div>
@@ -39,7 +61,7 @@ const ProjectDisplay = () => {
                         </div>
                     </div>
                     <div className="body mb-3">{ project.body }</div>
-                    <ProjectCarousel />
+                    <ProjectCarousel images = { images } />
                 </div>
             )}
         </div>

@@ -7,13 +7,18 @@ const ProjectList = ({ projects }) => {
         // map function goes through this array and outputs relevant information from each project
         <div className="ProjectList container">
             {projects.map(project => (
-                <Link to={`/projects/${ project.id }`}  key={ project.id }>
+                <Link to={`/projects/${ project.id }`}  key={ project.id } state={{
+                    title: project.title,
+                    date: project.date,
+                    link: project.link,
+                    body: project.body
+                }}>
                     <div className="tile container-fluid d-flex flex-column px-3 py-3 mb-3">
                         <div className="row mb-3 fs-3">
-                            <div className="red-color col fw-bold">
+                            <div className="green-text col fw-bold">
                                 { project.title }
                             </div>
-                            <div className="col text-end text-muted">
+                            <div className="col text-end">
                                 { project.date }
                             </div>
                         </div>
