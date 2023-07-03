@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Amplify, API } from "aws-amplify";
-import awsExports from './aws-exports';
+import awsExports from './aws-exports.js';
 
 // Custom hook that allows us to fetch data safely from any url passed into hook
 // Returns data being fetched and status of fetch (whether it is loading or an error has occured)
