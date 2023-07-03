@@ -6,8 +6,6 @@
     "@aws-amplify/ui-react": "^5.0.2",
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.10.1",
-    "@jridgewell/sourcemap-codec": "^1.4.15",
-    "@rollup/plugin-terser": "^0.4.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
