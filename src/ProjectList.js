@@ -13,7 +13,7 @@ const ProjectList = ({ projects }) => {
                     link: project.link,
                     body: project.body
                 }}>
-                    <div className="tile container-fluid d-flex flex-column px-3 py-3 mb-3">
+                    <div className="tile blur container-fluid d-flex flex-column px-3 py-3 mb-3">
                         <div className="row mb-3 fs-3">
                             <div className="green-text col fw-bold">
                                 { project.title }

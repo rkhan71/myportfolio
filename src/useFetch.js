@@ -15,12 +15,15 @@ const useFetch = (apiname, path) => {
 
     // useEffect hook used to fetch data so that it happens when page initially loaded or when apiname or path variable change
     useEffect(() => {
-        async function fetchdata() {
-            const res = await API.get(apiname, path);
+        API.get(apiname, path)
+        .then((res) => {
             setData(res);
             setLoading(false);
-        }
-        fetchdata();
+        }).catch((err) => {
+            console.log(err);
+            setError(err.message);
+            setLoading(false);
+        })
     }, [apiname, path]);
 
     return { data, loading, error }

@@ -27,15 +27,15 @@ a {
   background: linear-gradient(#11392900, #113929cc, #113929cc, #113929, #113929, #113929, #113929, #113929cc);
 }
 
-
-/* Project page stuff */
-.tile, .project-box, .contact-box {
+.blur {
   background-color: #A6B3AD99;
   backdrop-filter: blur(4px);
   color: #010E09;
   transition: 0.3s;
 }
 
+
+/* Project page stuff */
 .tile:hover {
   box-shadow: #010E09 0px 5px 15px;
   backdrop-filter: blur(10px);

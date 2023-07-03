@@ -45,7 +45,7 @@ const ProjectDisplay = () => {
                 <div className="mt-4 fw-bold">{ project.title }</div>
             </div>
             {project && (
-                <div className="container-fluid d-flex flex-column project-box px-5 py-5">
+                <div className="container-fluid d-flex flex-column blur px-5 py-5">
                     <div className="row mb-3">
                         <div className="col fs-3">
                             <div className="fw-bold green-text">

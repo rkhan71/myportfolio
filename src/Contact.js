@@ -50,7 +50,7 @@ const Contact = () => {
             {loading && <Loading />}
             {error && <Error error={ error } />}
             {!(sent) && !(loading) && !(error) && (
-                <div className="container contact-box px-5 py-5">
+                <div className="container blur px-5 py-5">
                     <div className="mb-3">
                         Feel free to use this form to contact me with any questions, comments, or concerns. Make sure to enter your name and email correctly so I can get back to you. If you would like to contact me more directly, please reach out through my email, phone number, LinkedIn, or GitHub which can all be found at the bottom of the page.
                     </div>
