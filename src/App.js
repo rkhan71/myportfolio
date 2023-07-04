@@ -6,7 +6,6 @@ import Navbar from "./Navbar";
 import NotFound from "./NotFound";
 import ProjectDisplay from "./ProjectDisplay";
 import Projects from "./Projects";
-import Resume from "./Resume";
 
 // Setting up different pages of web application using React Router
 function App() {  
