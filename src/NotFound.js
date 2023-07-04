@@ -3,7 +3,7 @@ import { HouseFill, CaretLeftFill } from "react-bootstrap-icons";
 
 // Page to display when user visits unrecognized route path
 const NotFound = () => {
-    // Using useNavigate hook to take user to their previous page when they click button
+    // Using useNavigate hook to take user to their previous page when they click back button
     const navigate = useNavigate();
 
     return (

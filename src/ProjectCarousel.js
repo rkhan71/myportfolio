@@ -1,6 +1,5 @@
 import React, {useState} from "react"; 
 import Carousel from 'react-bootstrap/Carousel';
-import { AdvancedImage } from '@cloudinary/react';
 
 function ProjectCarousel({ images }) {
   const [index, setIndex] = useState(0);
@@ -13,7 +12,6 @@ function ProjectCarousel({ images }) {
       {images.map((slide, i) => {
         return (
           <Carousel.Item>
-            <AdvancedImage cldImg={ slide.image } />
             <Carousel.Caption>
               <h3>{slide.caption}</h3>
               <p>{slide.description}</p>

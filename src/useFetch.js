@@ -21,7 +21,7 @@ const useFetch = (apiname, path) => {
             setLoading(false);
         }).catch((err) => {
             console.log(err);
-            setError(err.message);
+            setError("Error: " + err.message);
             setLoading(false);
         })
     }, [apiname, path]);

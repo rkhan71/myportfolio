@@ -1,4 +1,5 @@
 import headshot from "./headshot.jpg";
+import { FileEarmarkPdf } from "react-bootstrap-icons";
 
 const Home = () => {
     return (
@@ -21,6 +22,9 @@ const Home = () => {
                     </div>
                     <div>
                         When I am not working on any coursework or projects, most of my time goes towards sport and music. I play Golf and Rugby on club teams at Georgia Tech. I am also a soccer fanatic and enjoy playing pick up games regularly. My passion for music started when I was in elementary school taking classical guitar and piano lessons. Although I do not take formal lessons anymore, I still enjoy playing both instruments from time to time to unwind. I have also recently picked up DJing as a hobby, which has been an enjoyable way to use all the musical knowledge I have gathered over the years.
+                    </div>
+                    <div className="d-flex justify-content-center">
+                        <a href="https://online-portfolio-images.s3.us-east-2.amazonaws.com/public/resume.pdf" target="_blank" rel="noopener noreferrer"><button className="btn fw-bold double-space mt-5"><FileEarmarkPdf />  My Resume</button></a>
                     </div>
                 </div>
             </div>

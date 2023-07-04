@@ -19,9 +19,6 @@ const Navbar = () => {
                                 <Link className={"nav-link" + (location.pathname.search("projects") === -1 ? "" : " on")} to="/projects">Projects</Link>
                             </li>
                             <li className="nav-item px-5">
-                                <Link className={"nav-link" + (location.pathname === "/resume" ? " on" : "")} to="/resume">Resume</Link>
-                            </li>
-                            <li className="nav-item px-5">
                                 <Link className={"nav-link" + (location.pathname === "/contact" ? " on" : "")} to="/contact">Contact</Link>
                             </li>
                         </ul>

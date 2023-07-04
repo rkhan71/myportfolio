@@ -24,7 +24,7 @@ a {
 }
 
 .tint {
-  background: linear-gradient(#11392900, #113929cc, #113929cc, #113929, #113929, #113929, #113929, #113929cc);
+  background: linear-gradient(#11392900, #113929cc, #113929, #113929, #113929, #113929, #113929cc, #113929cc);
 }
 
 .blur {
@@ -83,6 +83,16 @@ a {
   background-color: white !important;
   color: #010E09 !important;
   border: none !important;
+}
+
+.Home .btn {
+  background-color: #A6B3AD;
+  color: #113929;
+}
+
+.Home .btn:hover {
+  background-color: #010E09;
+  color: #A6B3AD;
 }
 
 

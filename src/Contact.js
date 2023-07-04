@@ -2,9 +2,14 @@ import { useState } from "react";
 import Loading from "./Loading";
 import Error from "./Error";
 import { Send } from "react-bootstrap-icons";
+import { Link, useNavigate } from "react-router-dom";
+import { HouseFill, CaretLeftFill } from "react-bootstrap-icons";
 
 // Page where user can contact me through a form that sends me an email
 const Contact = () => {
+    // Using useNavigate hook to take user to their previous page when they click back button
+    const navigate = useNavigate();
+
     // Using useState hook to update status of form
     const [sent, setSent] = useState(false);
     const [error, setError] = useState(null);
@@ -83,8 +88,12 @@ const Contact = () => {
                 </div>
             )}
             {sent && (
-                <div className="container text-center fw-bold red-color">
-                    Message sent successfuly!
+                <div className="Sent blur container px-5 py-5 d-flex justify-content-center align-items-center flex-column night-text">
+                    <h3>Message sent successfuly!</h3>
+                    <div className="d-flex flex-row justify-content-around mt-3">
+                        <Link to="/"><button className="btn mx-5 fw-bold double-space"><HouseFill />  Home</button></Link>
+                        <button className="btn mx-5 fw-bold" onClick={() => navigate(-1)}><CaretLeftFill /> Back</button>
+                    </div>
                 </div>
             )}
         </div>

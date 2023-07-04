@@ -2,28 +2,22 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Github, CaretLeftFill } from "react-bootstrap-icons";
 import ProjectCarousel from "./ProjectCarousel";
-import { Cloudinary } from "@cloudinary/url-gen";
 
 // Displays singular project in full detail
 const ProjectDisplay = () => {
-    const cld = new Cloudinary({cloud: {cloudName: 'dha5vtjog'}});
-    const img1 = cld.image('placeholder1_ptxjuv');
-    const img2 = cld.image('placeholder2_y3xwex');
-    const img3 = cld.image('placeholder3_ukfyz9');
-
     const images = [
         {
-         image: img1,
+         image: "img1",
          caption:"Caption",
          description:"Description Here"
         },
         {
-          image: img2,
+          image: "",
           caption:"Caption",
           description:"Description Here"
         },
         {
-          image: img3, 
+          image: "img3", 
           caption:"Caption",
           description:"Description Here"
         } 
@@ -57,11 +51,11 @@ const ProjectDisplay = () => {
                         </div>
                         <div className="col text-end">
                             <Link to="/projects"><button className="btn fw-bold mx-3"><CaretLeftFill /> Back</button></Link>
-                            <a href={ project.link }><button className="btn fw-bold double-space"><Github />  Repo</button></a>
+                            <a href={ project.link } target="_blank" rel="noopener noreferrer"><button className="btn fw-bold double-space"><Github />  Repo</button></a>
                         </div>
                     </div>
                     <div className="body mb-3">{ project.body }</div>
-                    <ProjectCarousel images = { images } />
+                    {/* <ProjectCarousel images = { images } /> */}
                 </div>
             )}
         </div>
