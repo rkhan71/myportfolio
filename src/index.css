@@ -4,7 +4,7 @@ html, body, #root {
 }
 
 #root {
-  background-image: url('./trees2.jpg');
+  background-image: url("https://online-portfolio-images.s3.us-east-2.amazonaws.com/public/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom;

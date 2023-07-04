@@ -1,6 +1,5 @@
-import logo from "./logo.png";
 import { Link } from "react-router-dom";
-import { Linkedin, TelephoneFill, EnvelopeAtFill, Github, CCircle } from "react-bootstrap-icons";
+import { Linkedin, TelephoneFill, EnvelopeAtFill, Github } from "react-bootstrap-icons";
 
 // Footer for web app
 const Footer = () => {
@@ -9,7 +8,7 @@ const Footer = () => {
         <div className="Footer container-fluid mt-auto">
             <div className="row h-100">
                 <div className="col d-flex flex-column align-items-center justify-content-center">
-                    <img className="img-fluid w-50" src={logo} alt="logo"></img>
+                    <img className="img-fluid w-50" src="https://online-portfolio-images.s3.us-east-2.amazonaws.com/public/logo.png" alt="logo"></img>
                     <p className="mt-3">Last Updated: 1st January 2023</p>
                 </div>
                 <div className="col d-flex flex-column align-items-center justify-content-center">

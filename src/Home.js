@@ -1,4 +1,3 @@
-import headshot from "./headshot.jpg";
 import { FileEarmarkPdf } from "react-bootstrap-icons";
 
 const Home = () => {
@@ -10,7 +9,7 @@ const Home = () => {
             </div>
             <div className="tint px-5 py-5">
                 <div className="container px-5 py-5 ash-text">
-                    <img src={ headshot } alt="headshot" className="img-fluid float-start me-3" width="240" height="240" />
+                    <img src="https://online-portfolio-images.s3.us-east-2.amazonaws.com/public/headshot.jpg" alt="headshot" className="img-fluid float-start me-3" width="240" height="240" />
                     <div className="mb-3">
                         My name is Rayan Khan, and this is my online portfolio. Explore the different pages of this website to learn more about me, my projects, and my experiences.
                     </div>
