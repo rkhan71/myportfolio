@@ -40,7 +40,7 @@ const projects = [
       "date": "May 2023",
       "body": "Frogger Remake is a group project I completed alongside 5 peers over the course of a semester where we recreated a classic game in Java using Android Studio.\n\nThe goal of the game is to get a character from one side of the screen to another. In between the start and finish there is a road where the character has to avoid cars and a river where the character has to move on logs to avoid drowning.\n\nThis was the main project in a class where we learned about different software development processes and different aspects of software architecture. Doing the project with these topics in mind allowed me to truly learn and implement them while I worked through sprints with my team. It was also the first long term software development project I had done in a group, so I gained a lot of experience in that regard.\n\nOn the technical side, I vastly expanded my knowledge of Git. Using it within a group of developers gave me an understanding of the utility of branches, pull requests, and many other features. I also learned a lot about using Java and Android Studio to develop Android apps. I found learning how to write and run unit tests for an application particularly useful as I had only previously done this for small algorithmic programs.",
       "preview": "Frogger Remake is a group project I completed alongside 5 peers over the course of a semester where we recreated a classic game in Java using Android Studio.",
-      "link": "#"
+      "link": "https://github.gatech.edu/Team-49/team-49"
   },
   {
     "title":"Freekicks",
