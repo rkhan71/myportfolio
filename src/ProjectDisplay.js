@@ -1,28 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Github, CaretLeftFill } from "react-bootstrap-icons";
-import ProjectCarousel from "./ProjectCarousel";
 
 // Displays singular project in full detail
 const ProjectDisplay = () => {
-    const images = [
-        {
-         image: "img1",
-         caption:"Caption",
-         description:"Description Here"
-        },
-        {
-          image: "",
-          caption:"Caption",
-          description:"Description Here"
-        },
-        {
-          image: "img3", 
-          caption:"Caption",
-          description:"Description Here"
-        } 
-    ]
-    
     // Scroll to top on page load
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -55,7 +36,6 @@ const ProjectDisplay = () => {
                         </div>
                     </div>
                     <div className="body mb-3">{ project.body }</div>
-                    {/* <ProjectCarousel images = { images } /> */}
                 </div>
             )}
         </div>

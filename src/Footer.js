@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="row h-100">
                 <div className="col d-flex flex-column align-items-center justify-content-center">
                     <img className="img-fluid w-50" src="https://online-portfolio-images.s3.us-east-2.amazonaws.com/public/logo.png" alt="logo"></img>
-                    <p className="mt-3">Last Updated: 1st January 2023</p>
+                    <p className="mt-3">Last Updated: 20th September 2024</p>
                 </div>
                 <div className="col d-flex flex-column align-items-center justify-content-center">
                     <p className="fw-bold">Site Map</p>
